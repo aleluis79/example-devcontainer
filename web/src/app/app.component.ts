@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'paneles';
+  title = 'example-devcontainer';
 
   commonSvc = inject(CommonService)
 

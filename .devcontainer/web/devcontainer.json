@@ -12,7 +12,7 @@
 	"forwardPorts": [4200],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "/workspaces/paneles/.devcontainer/web/script.sh",
+	"postCreateCommand": "/workspaces/example-devcontainer/.devcontainer/web/script.sh",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -23,7 +23,7 @@
 		}
 	},
 
-	"workspaceFolder": "/workspaces/paneles/web/"
+	"workspaceFolder": "/workspaces/example-devcontainer/web/"
 
 	// Configure tool-specific properties.
 	// "customizations": {},

@@ -14,9 +14,9 @@
 	"forwardPorts": [5000],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "/workspaces/paneles/.devcontainer/api/script.sh",
+	"postCreateCommand": "/workspaces/example-devcontainer/.devcontainer/api/script.sh",
 
-	"workspaceFolder": "/workspaces/paneles/api/",
+	"workspaceFolder": "/workspaces/example-devcontainer/api/",
 	"customizations": {
 		"vscode": {
 			"extensions": [
