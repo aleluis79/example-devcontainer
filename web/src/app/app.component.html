@@ -1,0 +1,7 @@
+@let data = temperature();
+
+@for (temp of data; track temp.date) {
+  <div>{{ temp.date }} -> {{ temp.temperatureC }}°C</div>
+}
+
+<router-outlet />
