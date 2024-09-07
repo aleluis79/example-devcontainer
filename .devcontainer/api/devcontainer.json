@@ -12,20 +12,24 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [5000],
-
+	
+	"workspaceFolder": "/workspaces/example-devcontainer/api/",
+	
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "/workspaces/example-devcontainer/.devcontainer/api/script.sh",
 
-	"workspaceFolder": "/workspaces/example-devcontainer/api/",
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-dotnettools.csdevkit"
-			]
+				"ms-dotnettools.csdevkit",
+				"johnpapa.vscode-peacock",
+				"eamodio.gitlens"
+			],
+			"terminal.integrated.defaultProfile": "zsh"
 		}
 	},
 
-	"runArgs": ["--add-host=host.docker.internal:host-gateway"]
+	"runArgs": ["--add-host=host.docker.internal:host-gateway", "--network=host"]
 
 
 	// Configure tool-specific properties.

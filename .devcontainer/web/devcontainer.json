@@ -6,24 +6,31 @@
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	"features": {
+		"ghcr.io/devcontainers/features/docker-outside-of-docker": {}
+	},	
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [4200],
+	
+	"workspaceFolder": "/workspaces/example-devcontainer/web/",
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "/workspaces/example-devcontainer/.devcontainer/web/script.sh",
+	
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"Angular.ng-template",
 				"johnpapa.vscode-peacock",
 				"eamodio.gitlens"
-			]
+			],
+			"terminal.integrated.defaultProfile": "zsh"
 		}
 	},
 
-	"workspaceFolder": "/workspaces/example-devcontainer/web/"
+	"runArgs": ["--add-host=host.docker.internal:host-gateway", "--network=host"]
+
 
 	// Configure tool-specific properties.
 	// "customizations": {},
